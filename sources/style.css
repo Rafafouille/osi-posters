@@ -1,0 +1,395 @@
+/*-------------------------------------
+
+ FEUILLE DE STYLE
+
+-------------------------------------- */
+
+
+/* ENSEMBLE ==================== */
+
+html
+{
+	padding:0px;
+	margin:0px;
+}
+
+body
+{
+	background-color:#FFEECC;
+	padding:0px;
+	margin:0px;
+	font-family:arial;
+}
+
+input, textarea , select 
+{
+	  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input:focus , textarea:focus, select:focus
+{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+a:hover
+{
+	text-decoration:none;
+}
+
+/* ENTETE ================== */
+
+header
+{
+	background-color:white;
+	vertical-align:middle;
+	min-height:100px;
+	margin:0px;
+	padding:0px;
+}
+
+header h1
+{
+	margin:0px;
+	margin-left:150px;
+	padding:0px;
+	padding-top:15px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+#logo_entete
+{
+	float:left;
+	height:100px;
+	vertical-align:middle;
+	margin:0px;
+	padding:0px;
+	margin-right:20px;
+}
+
+/* BOITE ================== */
+
+.boite
+{
+display:none;
+}
+
+#boite_envoi
+{
+	display:none;
+}
+
+#boite_envoi_en_cours
+{
+	display:none;
+}
+
+.icone_chargement_envoi
+{
+	display:none;
+}
+
+#boite_suppression div
+{
+	text-align:center;
+}
+
+#boite_suppression .miniature_suppression
+{
+	height:150px;
+}
+
+#boite_suppression table
+{
+	/*width:200px;*/
+	margin:auto;
+}
+
+#boite_suppression td img
+{
+	border:solid 1px;
+}
+
+/* MESSAGES RETOUR ========= */
+
+.message_retour_GOOD,.message_retour_BAD
+{
+	text-align:center;
+	border-radius:20px;
+	margin:auto;
+	padding:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:400px;
+}
+
+.message_retour_GOOD
+{
+	background-color:#CCFFCC;
+}
+.message_retour_BAD
+{
+	background-color:#FFAAAA;
+}
+
+
+
+/* MENU ===================== */
+#menu
+{
+	width:100%;
+	margin:0px;
+	padding:10px;
+	text-align:right;
+}
+
+#boutonOuvreFormulaireEnvoi
+{
+	display:inline-block;
+	cursor:pointer;
+	padding:5px;
+	border-radius:5px;
+	margin-right:20px;
+}
+
+#boutonOuvreFormulaireEnvoi:hover
+{
+	background-color:#AAFFAA;
+}
+
+#boutonOuvreFormulaireEnvoi img
+{
+	vertical-align:middle;
+}
+
+#boutonOuvreLogin
+{
+	float:left;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	
+	text-align:left;
+	font-weight:bold;
+	
+	width:150px;
+	height:24px;
+	padding-left:27px;
+	padding-top:3px;
+}
+
+#boutonOuvreLogin.boutonLogin_unloged
+{
+	background-image:url('./images/cadenas_unloged.png');
+	color:#00AA00;
+}
+#boutonOuvreLogin.boutonLogin_unloged:hover
+{
+	background-image:url('./images/cadenas.png');
+	color:#AA0000;
+}
+
+#boutonOuvreLogin.boutonLogin_loged
+{
+	background-image:url('./images/cadenas.png');
+	color:#AA0000;
+}
+#boutonOuvreLogin.boutonLogin_loged:hover
+{
+	background-image:url('./images/cadenas_unloged.png');
+	color:#00AA00;
+}
+
+#boite_login td
+{
+	min-width:200px;
+}
+
+.boutonOeil
+{
+	cursor:pointer;
+	height:19px;
+}
+
+#boite_login img,#boite_suppression img
+{
+	vertical-align:-3px;
+}
+
+
+/* POSTER =================== */
+
+/* GROUPE DE POSTERS */
+#liste_posters
+{
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+
+/* POSTER DANS SON ENSEMBLE*/
+.poster
+{
+	display:inline-block;
+	text-align:center;
+	font-weight:bold;
+	margin:10px;
+	width:150px;
+	/*overflow:hidden;*/
+	vertical-align:top;
+	/*background-color:green;*/
+}
+
+.invalide
+{
+	color:gray;
+	-webkit-filter: opacity(30%); /* Safari */
+	filter: opacity(30%);
+}
+
+
+/* Zone de vote */
+.poster .vote_box
+{
+	/*visibility:hidden;*/
+	min-height:24px;
+}
+.poster:hover>.vote_box
+{
+	/*visibility:visible;*/
+}
+.poster[data-etat=valide] .vote_box img
+{
+	cursor:pointer;
+}
+
+/* icone principale du psoter*/
+
+.poster .lien_grande_icone
+{
+	display:inline-block;
+	position: relative;
+}
+
+.poster .grande_icone
+{
+	margin:0px;
+	height:200px;
+	border:1px gray;
+	border-radius:20px;
+	box-shadow: 3px 3px 7px #555;
+}
+
+.poster .grande_icone:hover
+{
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:-5px;
+	margin-right:-5px;
+	box-shadow: 1px 1px 3px #222;
+}
+
+
+/* Numero de poster */
+.poster .numero_poster
+{
+	display:inline-block;
+	text-align:center;
+	color:white;
+	/*border:solid black;*/
+	border-radius:15px;
+	
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	
+	padding:0px;
+	margin:0px;
+	
+	position:absolute;
+	top:-10px;
+	left:-10px;
+}
+
+.poster .numero_poster span
+{
+	vertical-align:middle;
+	display:block;
+	margin:auto;
+	margin-top:6px;
+}
+
+.poster .numero_poster:not(.own)
+{
+	background-color:black;
+}
+
+.own
+{
+	background-color:red;
+}
+
+
+/*titre + nom lycée */
+.poster .nom_lycee, .poster .affiche_mdp, .poster .affiche_mail
+{
+	font-size:small;
+	font-style:italic;
+}
+
+/* boutons sous poster*/
+.poster .icon_sous_poster
+{
+	display:inline-block;
+	height:40px;
+	cursor:pointer;
+	box-shadow: 1px 1px 3px #555;
+	vertical-align:middle;
+	border-radius:20px;
+}
+
+.groupe_icon_sous_poster 
+{
+	visibility:hidden;
+}
+
+.poster:hover>.groupe_icon_sous_poster
+{
+	visibility:visible;
+/*	display:inline-block;*/
+}
+
+
+.poster .icon_sous_poster:hover
+{
+	margin-top:2px;
+	margin-left:2px;
+	margin-bottom:-2px;
+	margin-right:-2px;
+	box-shadow: 0px 0px 3px #222;
+}
+
+
+.poster form
+{
+	display:inline-block;
+}
+
+input[type="checkbox"]
+{
+	cursor:pointer;
+	margin-left:10px;
+	transform:scale(2, 2);
+	vertical-align:middle;
+}
+
